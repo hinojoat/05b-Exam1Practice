@@ -3,8 +3,8 @@ PRACTICE Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
-         their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, and Alex Hinojosa.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -28,6 +28,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 import testing_helper
 import time
+import math
 
 
 def main():
@@ -149,6 +150,10 @@ def run_test_problem1a():
     #   print('       actual:  ', actual)
     # -------------------------------------------------------------------------
 
+    expected = 1.278
+    actual = problem1a(30, 100)
+    print('Test 2 expected:', expected)
+    print('       actual   ', actual)
 
 def problem1a(m, n):
     """
@@ -176,6 +181,9 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
+    act = 0
+    for k in range(abs(m), abs(n)):
+        act = act + math.sin()
 
 
 def run_test_problem1b():

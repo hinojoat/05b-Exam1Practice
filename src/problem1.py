@@ -39,7 +39,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the green doc-string for the:
+# DONE: 2.  READ the green doc-string for the:
 #   - is_prime
 #   - sum_of_digits
 # functions defined below.  You do NOT need to understand their
@@ -182,8 +182,9 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
     act = 0
-    for k in range(abs(m), abs(n)):
-        act = act + math.sin()
+    for k in range(m ** 2, n ^ 2):
+        act = act + math.sin(k)
+    return act
 
 
 def run_test_problem1b():
@@ -207,8 +208,8 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
-    expected =
-    actual = problem1b(,)
+    expected = 5
+    actual = problem1b(4, 5)
     print('Test 1 expected:', expected)
     print('       actual:  ', actual)
 
@@ -258,7 +259,12 @@ def problem1b(m, f):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
-
+    act = 0
+    for k in range(m, (f * m)):
+        is_prime(k)
+    if True:
+        act = act + 1
+    return act
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -356,6 +362,7 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # -------------------------------------------------------------------------
+    for k in range(2, n + 1):
 
 
 ###############################################################################

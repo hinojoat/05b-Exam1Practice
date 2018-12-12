@@ -107,7 +107,7 @@ def sum_of_digits(number):
 def run_test_problem1a():
     """ Tests the   problem1a   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # DONE: 3. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   4   ** tests (we wrote two for you).
     # -------------------------------------------------------------------------
@@ -150,8 +150,13 @@ def run_test_problem1a():
     #   print('       actual:  ', actual)
     # -------------------------------------------------------------------------
 
-    expected = 1.278
-    actual = problem1a(30, 100)
+    expected = 1.135
+    actual = problem1a(1, -2)
+    print('Test 2 expected:', expected)
+    print('       actual   ', actual)
+
+    expected = -1.601
+    actual = problem1a(3, 5)
     print('Test 2 expected:', expected)
     print('       actual   ', actual)
 
@@ -173,7 +178,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -182,7 +187,7 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
     act = 0
-    for k in range(m ** 2, n ^ 2):
+    for k in range(m ** 2, (n ** 2) + 1):
         act = act + math.sin(k)
     return act
 
@@ -190,7 +195,7 @@ def problem1a(m, n):
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this TEST function.
+    # DONE: 5. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.  Use the usual form:
     #
@@ -214,7 +219,7 @@ def run_test_problem1b():
     print('       actual:  ', actual)
 
     expected = 5
-    actual = problem1b(3, 6)
+    actual = problem1b(3, 5)
     print('Test 2 expected:', expected)
     print('       actual:  ', actual)
 
@@ -223,8 +228,8 @@ def run_test_problem1b():
     print('Test 3 expected:', expected)
     print('       actual:  ', actual)
 
-    expected = 5
-    actual = problem1b(3, 5)
+    expected = 44
+    actual = problem1b(5, 40)
     print('Test 4 expected:', expected)
     print('       actual:  ', actual)
 
@@ -260,10 +265,10 @@ def problem1b(m, f):
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
     act = 0
-    for k in range(m, (f * m)):
+    for k in range(m, (f + 1 * m)):
         is_prime(k)
-    if True:
-        act = act + 1
+        if True:
+            act = act + 1
     return act
 
 def run_test_problem1c():
@@ -362,7 +367,13 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # -------------------------------------------------------------------------
+    act = 0
     for k in range(2, n + 1):
+        is_prime(k)
+    if is_prime(k) == True:
+        act = act + 1 * k
+    return act
+
 
 
 ###############################################################################
